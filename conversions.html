@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Conversions</title>
+  </head>
+  <body>
+    <h2>
+      Оператор == при порівнянні враховує типи своїх операндів, тобто двох
+      значень, які порівнюються. Є два варіанти:
+    </h2>
+    <ul>
+      <li>
+        Якщо два значення відносяться до одного типу, просто порівнюємо їх
+      </li>
+      <li>
+        Якщо значення відносяться до різних типів, намагаємося перетворити їх до
+        одного типу, а потім порівнюємо
+      </li>
+    </ul>
+
+    <script>
+      //exersise
+      if (99 == "99") {
+        console.log("A numder equals a string!"); //Console JS - A numder equals a string!
+      } else {
+        console.log("No way a number equals a string");
+      }
+
+      var testMe = 99;
+      if (testMe == 99) {
+        //Відбувається щось хороше
+      }
+
+      var testMe = "99";
+      if (testMe == 99) {
+        //Відбувається щось хороше
+      }
+
+      //1 - Порівняння числа з строкою
+      99 == "vanilla";
+      99 == NaN;
+      //false
+
+      //2 - Порівняння булевского значення з любим іншим типом
+      1 == true;
+      1 == 1;
+      //true
+
+      "1" == true;
+      "1" == true;
+      1 == 1;
+      //true
+
+      //3 - Порівняння null з undefined
+      undefined == null;
+      //true
+
+      //4 - Случая 4 не має
+      1 == "";
+      1 == 0;
+      //false
+    </script>
+  </body>
+</html>
