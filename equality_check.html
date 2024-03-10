@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Equality check</title>
+  </head>
+  <body>
+    <h2>Як перевірити два об'єкти на рівність</h2>
+    <h3>
+      Якщо обидва операнди є об'єктами, можемо використовувати як ==, так і ===,
+      тому що вони працюють абсолютно однаково
+    </h3>
+    <ul>
+      <li>
+        Під час перевірки рівності двох об'єктних змінних порівнюються посилання
+        на ці об'єкти
+      </li>
+      <li>
+        Два посилання дорівнюють лише в тому випадку, якщо вони посилаються на
+        один об'єкт
+      </li>
+    </ul>
+
+    <script>
+      //Пошук машин на стоянці.
+      //Проаналізувати код та записати значення змінних loc1-loc4
+      function findCarInLot(car) {
+        for (var i = 0; i < lot.length; i++) {
+          if (car === lot[i]) {
+            return i;
+          }
+        }
+        return -1;
+      }
+      var chevy = {
+        make: "Chevy",
+        model: "Bel Air",
+      };
+      var taxi = {
+        make: "Webville Motors",
+        model: "Taxi",
+      };
+      var fiat1 = {
+        make: "Fiat",
+        model: "500",
+      };
+      var fiat2 = {
+        make: "Fiat",
+        model: "500",
+      };
+
+      var lot = [chevy, taxi, fiat1, fiat2];
+
+      var loc1 = findCarInLot(fiat2); //index 3 в масиві Fiat
+      console.log(loc1);
+      var loc2 = findCarInLot(taxi); //1 - Webville Motors
+      console.log(loc2);
+      var loc3 = findCarInLot(chevy); //0 - Chevy
+      console.log(loc3);
+      var loc4 = findCarInLot(fiat1); //2 - Fiat
+      console.log(loc4);
+    </script>
+  </body>
+</html>
