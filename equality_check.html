@@ -25,13 +25,15 @@
       //Пошук машин на стоянці.
       //Проаналізувати код та записати значення змінних loc1-loc4
       function findCarInLot(car) {
+        //виклик функції пошуку машини car в масиві lot i порівнюємо її з переданою машиною
         for (var i = 0; i < lot.length; i++) {
           if (car === lot[i]) {
-            return i;
+            return i; //якщо знайдено - повертаємо її індекс у масиві
           }
         }
-        return -1;
+        return -1; //якщо не знайдена - повертаємо -1
       }
+      //Об'єкти, які представляють різні машини з різними властивостями
       var chevy = {
         make: "Chevy",
         model: "Bel Air",
@@ -48,16 +50,17 @@
         make: "Fiat",
         model: "500",
       };
-
+      //Масив lot, який містить всі ці об'єкти
       var lot = [chevy, taxi, fiat1, fiat2];
-
-      var loc1 = findCarInLot(fiat2); //index 3 в масиві Fiat
+      console.log(lot);
+      //Звертаємось до функції findCarInLot з нашими аргументами і записуємо в змінні, які виводяться в консоль для перевірки
+      var loc1 = findCarInLot(fiat2); //loc1 повертає 3, оскільки fiat2 є четвертим елементом у масиві lot
       console.log(loc1);
-      var loc2 = findCarInLot(taxi); //1 - Webville Motors
+      var loc2 = findCarInLot(taxi); //loc2 повертає 1, оскільки taxi є другим елементом у масиві lot
       console.log(loc2);
-      var loc3 = findCarInLot(chevy); //0 - Chevy
+      var loc3 = findCarInLot(chevy); //loc3 повертає 0, оскільки chevy є першим елементом у масиві lot
       console.log(loc3);
-      var loc4 = findCarInLot(fiat1); //2 - Fiat
+      var loc4 = findCarInLot(fiat1); //loc4 повертає 2, оскільки fiat1 є третім елементом у масиві lot
       console.log(loc4);
     </script>
   </body>
