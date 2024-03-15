@@ -109,6 +109,38 @@
       }
       //Визначте, скільки хибних відповідей дав підозрюваний - 3
       //а також чи винний він за пред'явленими звинуваченнями (три і більше хибні відповіді) - винний
+
+      var text = "YOU SHOULD NEVER SHOUT WHEN TYPING";
+      var presentableText = text.toLowerCase();
+      if (presentableText.length > 0) {
+        alert(presentableText);
+      }
+
+      var emot = "XOxxOO";
+      var hugs = 0;
+      var kisses = 0;
+
+      emot = emot.trim();
+      emot = emot.toUpperCase();
+
+      for (var i = 0; i < emot.length; i++) {
+        if (emot.charAt(i) === "X") {
+          hugs++;
+        } else if (emot.charAt(i) == "O") {
+          kisses++;
+        }
+      }
+
+      var name = "Jenny";
+      var phone = "867-5309";
+      var fact = "This is a prime number";
+
+      var songName = phone + "/" + name;
+
+      var index = phone.indexOf("-");
+      if (fact.substring(10, 15) === "prime") {
+        alert(fact);
+      }
     </script>
   </body>
 </html>
