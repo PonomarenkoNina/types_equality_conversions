@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Methods and properties of string</title>
+  </head>
+  <body>
+    <h2>Methods and properties of string</h2>
+    <ul>
+      <li>
+        Властивість length містить кількість символів у рядку. Його зручно
+        використовувати під час перебору символів рядка. А метод charAt отримує
+        символ з конкретним індексом у рядку.
+      </li>
+      <li>
+        Метод indexOf отримує рядок-аргумент та повертає індекс першого символу
+        першого входження аргументу у своєму рядку.
+      </li>
+      <li>
+        Метод substring отримує два індекси, після чого витягує та повертає
+        укладений між ними рядок.
+      </li>
+      <li>
+        Метод split отримує символ-обмежувач та розбиває рядок на частини за
+        позицією обмежувача.
+      </li>
+    </ul>
+
+    <script>
+      //Властивість length та метод charAt
+      var input = "jenny@wickedlysmart.com";
+      for (var i = 0; i < input.length; i++) {
+        if (input.charAt(i) === "@") {
+          console.log("There's an @ sign at index " + i); //There's an @ sign at index 5
+        }
+      }
+      //Метод indexOf
+      var phrase = "the cat in the hat";
+
+      var index = phrase.indexOf("cat");
+      console.log("there's a cat sitting at index " + index); //There's a cat sitting at index 4
+
+      index = phrase.indexOf("the", 5);
+      console.log("there's a the sitting at index " + index); //There's a the sitting at index 11
+
+      index = phrase.indexOf("dog");
+      console.log("there's a dog sitting at index " + index); //There's a dog sitting at index -1
+
+      //Метод substring
+      var data = "name|phone|address";
+      var val = data.substring(5, 10);
+      console.log("Substring is " + val); //Substring is phone
+
+      val = data.substring(5);
+      console.log("Substring is now " + val); //Substring is phone|address
+
+      //Метод split
+      var data = "name|phone|address";
+      var vals = data.split("|");
+      console.log("Split array is ", vals); //Split array is ["name", "phone", "address"]
+    </script>
+  </body>
+</html>
