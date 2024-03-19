@@ -110,36 +110,44 @@
       //Визначте, скільки хибних відповідей дав підозрюваний - 3
       //а також чи винний він за пред'явленими звинуваченнями (три і більше хибні відповіді) - винний
 
+      //Що робить цей код?
       var text = "YOU SHOULD NEVER SHOUT WHEN TYPING";
       var presentableText = text.toLowerCase();
       if (presentableText.length > 0) {
         alert(presentableText);
       }
+      //цей код перетворює текс в нижній регістр всі символи і виводить його вже маленькими літерами
 
-      var emot = "XOxxOO";
+      //СТРОКИ: примитивні типи (прості) або об'єкти (володіють станом та поведінкою - властивості і методи)
+      var emot = "XOxxOO"; // примітивна строка
       var hugs = 0;
       var kisses = 0;
 
-      emot = emot.trim();
+      emot = emot.trim(); //виклик метолу для строки
       emot = emot.toUpperCase();
 
       for (var i = 0; i < emot.length; i++) {
+        //строка з властивістю length
         if (emot.charAt(i) === "X") {
           hugs++;
         } else if (emot.charAt(i) == "O") {
+          //знов метод charAt
           kisses++;
         }
       }
 
+      //Строки-примітив та строки-об'єкт
+      //Створюємо три примітивні строки
       var name = "Jenny";
       var phone = "867-5309";
       var fact = "This is a prime number";
 
-      var songName = phone + "/" + name;
+      var songName = phone + "/" + name; //Строки об'єднуються - конкатенація
 
-      var index = phone.indexOf("-");
+      var index = phone.indexOf("-"); //Викликається метод indexOf і перетворює phone в строку-об'єкт
       if (fact.substring(10, 15) === "prime") {
-        alert(fact);
+        //Строка fact тимчасово перетворюється в об'єкт
+        alert(fact); //Строка fact (повернення примітивної строки)
       }
     </script>
   </body>
