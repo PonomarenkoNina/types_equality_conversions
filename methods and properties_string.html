@@ -110,7 +110,7 @@
       //Необхідно лише розібратися з особливим випадком - можливим відсутністю дефісу в номері.
       //Телефон складається або лише з семи цифр, або з восьми з дефісом у третій позиції.
       function validate(phoneNumder) {
-        if (phoneNumder.length !== 8 || phoneNumder.length < 7) {
+        if (phoneNumder.length > 8 || phoneNumder.length < 7) {
           return false;
         }
         for (var i = 0; i < phoneNumder.length; i++) {
